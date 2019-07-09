@@ -26,10 +26,6 @@ export class TodoItem extends Component {
         }
     };
 
-    markComplete = () => {
-
-    };
-
 
     render() {
         return (
@@ -37,7 +33,7 @@ export class TodoItem extends Component {
                 <p>
                     <input 
                         type="checkbox" 
-                        onChange={this.markComplete}
+                        onChange={this.props.markComplete}
                     />
                     {'  '}
                     {this.props.todo.title}
