@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Todos from './components/Todos';
 import Header from './components/layout/Header';
 import AddTodo from './components/AddTodo';
+import About from './components/pages/About';
 
 // CSS
 import './App.css';
@@ -69,7 +70,7 @@ class App extends Component {
         <div>
           <div className="container">
             <Header />
-            <Route path="/" render={props => (
+            <Route exact path="/" render={props => (
               <React.Fragment>
                 <AddTodo
                   addTodo={this.addTodo}
@@ -82,6 +83,7 @@ class App extends Component {
               </React.Fragment>
             )}
             />
+            <Route path="/about" component={About}/>
 
           </div>
         </div>
