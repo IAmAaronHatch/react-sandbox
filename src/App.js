@@ -22,8 +22,8 @@ class App extends Component {
     ]
   };
 
-  markComplete = (e) => {
-    console.log('from app js')
+  markComplete = (id) => {
+    console.log(id)
   };
 
   render () {
